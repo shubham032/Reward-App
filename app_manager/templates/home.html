@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="home">
+    <h1>Welcome to the Reward App</h1>
+    <p>This is a system where users can complete tasks and earn points.</p>
+    <a href="{% url 'signup' %}" class="btn bg-dark text-white">Get Started</a>
+</div>
+{% endblock %}

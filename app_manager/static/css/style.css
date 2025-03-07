@@ -1,0 +1,478 @@
+/* Home page container */
+.main{
+    padding: 10px;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* Signup container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(229, 236, 239);
+    padding: 0px 20px;
+    width: 100%;
+}
+
+/* Signup form */
+.signup-form {
+    border: 1px solid rgb(217, 214, 214);
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling labels and inputs inside form */
+.signup-form p {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.signup-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="checkbox"],
+.signup-form select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Checkbox inline styling */
+.signup-form input[type="checkbox"] {
+    width: auto;
+    margin-left: 5px;
+}
+
+/* Signup button */
+.signup-form button {
+    background-color: #2f3337;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #1d1f21;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .signup-form {
+        padding: 20px;
+        max-width: 90%; /* Make it flexible on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 15px;
+    }
+}
+
+/* dashboard section */
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f8fbfc;
+    min-height:100vh ;
+}
+
+/* Left Section (User Info) */
+.dashboard-left {
+    flex: 1;
+    /* background: #1d232d; */
+    color: rgb(214, 212, 212);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border:1px solid rgb(237, 237, 237);
+}
+
+/* Right Section (Apps & Tasks) */
+.dashboard-right {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border:1px solid rgb(237, 237, 237)
+
+}
+
+/* App List */
+.app-list {
+    list-style: none;
+    padding: 0;
+}
+
+.app-list li {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.app-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.app-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.app-name {
+    font-weight: bold;
+}
+
+.app-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Completed Tasks */
+.completed-tasks {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.completed-tasks li {
+    padding: 10px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Custom Buttons */
+.custom-btn {
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover Effects */
+.custom-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Primary Button (Link) */
+.btn-primary.custom-btn {
+    background-color: transparent;
+    border: 2px solid #2f3337;
+    color: black;
+}
+
+.btn-primary.custom-btn:hover {
+    background-color: #2f3337;
+    border: none;
+    color: white;
+}
+
+/* Success Button (Upload) */
+.btn-success.custom-btn {
+    background-color: #2f3337;
+    border: none;
+    color: white;
+}
+
+.btn-success.custom-btn:hover {
+    background-color: transparent;
+    border: 2px solid #2f3337;
+    color: black;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-left,
+    .dashboard-right {
+        width: 100%;
+    }
+}
+
+
+/*  Admin dashboard */
+.admin-dashboard{
+    margin:30px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.addNewApp-btn{
+    background-color:#2f3337;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.addNewApp-btn:hover{
+    background-color:white ;
+    color: #2f3337;
+    border: 2px solid #2f3337;
+}
+.table{
+    border: 1px solid rgb(157, 156, 156);
+    border-radius: 10px;
+}
+
+/* /profile */
+/* Profile Container */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border:1px solid rgb(213, 211, 211)
+}
+
+/* Profile Title */
+.profile-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* No Profile Picture */
+.no-profile-pic {
+    color: #777;
+    font-style: italic;
+}
+
+/* Points Earned */
+.points-earned {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Update Title */
+.update-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Profile Form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Form Elements */
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Update Button */
+.update-btn {
+    background-color: #2f3337;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+    background-color: #1d1f21;
+    transform: scale(1.05);
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+
+/* upload container */
+/* Upload Container */
+.upload-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border:1px solid rgb(213, 211, 211)
+
+}
+
+/* Upload Title */
+.upload-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Upload Form */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Form Inputs */
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Upload Button */
+.upload-btn {
+    background-color: #2f3337;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.upload-btn:hover {
+    background-color: #1d1f21;
+    transform: scale(1.05);
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+    .upload-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+/*  edit delete */
+/* Form Container */
+.custom-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Title */
+.form-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styled Form */
+.styled-form {
+    text-align: start;
+}
+.styled-form-delete{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+/* Form Inputs */
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Buttons */
+.form-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+

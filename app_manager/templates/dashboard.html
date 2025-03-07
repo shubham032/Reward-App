@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block container_class %}dashboard-container{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <!-- Left Section: User Info -->
+    <div class="dashboard-left   bg-dark">
+        <h2>Hello, {{ user.username }}</h2>
+        <p><strong>Total Points:</strong> {{ total_points }}</p>
+    </div>
+
+    <!-- Right Section: Apps & Tasks -->
+    <div class="dashboard-right">
+        <h3>Available Apps:</h3>
+        <ul class="app-list">
+            {% for app in apps %}
+            <li>
+                <img src="{{ app.icon.url }}" alt="{{ app.name }}" class="app-icon">
+                <div class="app-details">
+                    <span class="app-name">{{ app.name }} - {{ app.points }} Points</span>
+                    <div class="app-links">
+                        <a href="{{ app.link }}" class="btn btn-primary custom-btn">🔗 Visit</a>
+                        <a href="{% url 'upload_screenshot' app.id %}" class="btn btn-success custom-btn">📤 Upload</a>
+                    </div>
+                    
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        
+        <ul class="completed-tasks">
+            <h3>Completed Tasks:</h3>  
+            {% for task in completed_tasks %}
+            <li>{{ task.app.name }} - <span class="completed">Completed!</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

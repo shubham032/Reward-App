@@ -1,0 +1,28 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+/* signup */
+.Signup{
+    padding-top:10px ;
+    background-color: rgb(221, 223, 224);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.signup-form{
+    border: 1px solid rgb(217, 214, 214);
+    background-color: white;
+    margin: 10px 300px;
+    border-radius: 5px;
+    padding: 30px 50px;
+
+}
+
+/* Styling labels and inputs inside form.as_
+
+

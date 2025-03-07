@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+{% block title %}Profile{% endblock %} 
+
+{% block content %}
+<div class="profile-container">
+    <h2 class="profile-title">{{ user.username }}'s Profile</h2>
+
+    <div class="profile-info">
+        {% if profile.profile_picture %}
+        <img src="{{ profile.profile_picture.url }}" class="profile-picture" />
+        {% else %}
+        <p class="no-profile-pic">No profile picture uploaded.</p>
+        {% endif %}
+
+        <p class="points-earned"><strong>Total Points Earned:</strong> {{ profile.points_earned }}</p>
+    </div>
+
+    <h3 class="update-title">Update Profile Picture</h3>
+    <form method="POST" enctype="multipart/form-data" class="profile-form">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit" class="btn update-btn">Update</button>
+    </form>
+</div>
+{% endblock %}

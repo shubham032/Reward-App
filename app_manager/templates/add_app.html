@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Add App{% endblock %}
+
+{% block content %}
+<a href="{% url 'admin_dashboard' %}" class="btn btn-secondary back-btn">Back to Dashboard</a>
+<div class="custom-container">
+    
+    <h2 class="form-title">Add a New App</h2>
+
+    <form method="POST" enctype="multipart/form-data" class="styled-form">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success form-btn">Add App</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block container_class %}signup-container{% endblock %} <!-- Reusing the same container -->
+
+{% block content %}
+<div class="form-container">
+<div class="signup-form"> <!-- Reusing signup-form styling -->
+    <h2 class="text-center">Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-secondary w-100 mt-3">Login</button>
+    </form>
+</div>
+</div>
+{% endblock %}

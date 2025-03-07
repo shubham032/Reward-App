@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Delete App{% endblock %}
+
+{% block content %}
+<div class="custom-container">
+    <h2 class="form-title">Delete App</h2>
+    <p class="delete-warning">Are you sure you want to delete "<strong>{{ app.name }}</strong>"?</p>
+
+    <form method="POST" class="styled-form-delete">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="{% url 'admin_dashboard' %}" class="btn btn-secondary cancel-btn">Cancel</a>
+    </form>
+</div>
+{% endblock %}
